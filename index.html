@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 - Layout Web CSS | Ahmad Kurnia</title>
+    
+    <!-- Memanggil CSS Bootstrap 4 via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .content-card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .section-title {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        /* Penyesuaian agar logo terlihat proporsional di navbar */
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+            background-color: white; /* Memberi background putih agar logo lebih jelas jika navbar berwarna gelap */
+            padding: 3px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADING MENU (NAVBAR) DENGAN LOGO -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold d-flex align-items-center" href="#">
+                <!-- Memanggil file gambar utb_kotak.png -->
+                <img src="utb_kotak.png" alt="Logo UTB">
+                Tugas Web 1
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Materi CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ISI KONTEN (Menggunakan Grid System Bootstrap) -->
+    <div class="container">
+        <div class="row">
+            
+            <!-- KOLOM KIRI: Konten Utama (Lebar 8 Grid) -->
+            <div class="col-lg-8">
+                
+                <!-- Identitas Mahasiswa -->
+                <div class="card content-card p-4">
+                    <h4 class="section-title">Profil Mahasiswa</h4>
+                    <table class="table table-borderless table-sm mb-0">
+                        <tbody>
+                            <tr>
+                                <th width="150">Nama</th>
+                                <td>: Ahmad Kurnia</td>
+                            </tr>
+                            <tr>
+                                <th>NIM</th>
+                                <td>: 24552011297</td>
+                            </tr>
+                            <tr>
+                                <th>Kelas</th>
+                                <td>: TIF RP 24E CNS</td>
+                            </tr>
+                            <tr>
+                                <th>Semester</th>
+                                <td>: 5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Artikel Dummy (Lorem Ipsum) -->
+                <div class="card content-card p-4">
+                    <h4 class="section-title">Artikel Dummy (Lorem Ipsum)</h4>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. 
+                    </p>
+                    <p class="text-justify">
+                        Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. 
+                    </p>
+                    <p class="text-justify">
+                        Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- KOLOM KANAN: Sidebar (Lebar 4 Grid) -->
+            <div class="col-lg-4">
+                <div class="card content-card">
+                    <div class="card-header bg-dark text-white font-weight-bold">
+                        Informasi Tugas
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Mata Kuliah:</strong><br>Pemrograman Web I</li>
+                        <li class="list-group-item"><strong>Dosen Pengampu:</strong><br>Nova Agustina, ST., M.Kom.</li>
+                        <li class="list-group-item"><strong>Materi:</strong><br>Pertemuan 3 - CSS & Responsive Design</li>
+                        <li class="list-group-item"><strong>Deskripsi:</strong><br>Implementasi desain 1 halaman menggunakan layout struktur bebas dan framework CSS.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Ahmad Kurnia - Tugas Pemrograman Web 1. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script Javascript Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
